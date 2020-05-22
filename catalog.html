@@ -83,14 +83,72 @@
       </div><!-- /.breadcrumbs -->
       <h2>Перфораторы</h2>
       <section><!-- sorting -->
-        <div>
-          <p>Сортировка:</p><!-- temporary tag -->
-          <span>По цене</span><!-- temporary tag -->
-          <span>По типу</span><!-- temporary tag -->
-          <span>По функционалу</span><!-- temporary tag -->
-          <span>Стрелка вверх</span><!-- temporary tag -->
-          <span>Стрелка вниз</span><!-- temporary tag -->
-        </div>
+        <div><!-- sorting-block columns -->
+          <h3>Фильтр:</h3>
+          <div>Сортировка:</div>
+          <ul>
+            <li>
+              <a href="">По цене</a>
+            </li>
+            <li>
+              <a href="">По типу</a>
+            </li>
+            <li>
+              <a href="">По функционалу</a>
+            </li>
+          </ul>
+          <a href="" aria-label="sort ascending"></a><!-- up-sort icon -->
+          <a href="" aria-label="sort descending"></a><!-- down-sort icon -->
+        </div><!-- /.sorting-block columns -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Цена</legend>
+            <input type="range" min="0" max="30000" step="1000">
+            <div>
+              <input type="text" name="min-price" placeholder="0">
+              <input type="text" name="max-price" placeholder="30000">
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Производители</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="bosch" id="filter-bosch" checked>
+                <label for="filter-bosch">Bosch</label>
+              </li>
+              <li>
+                <input type="checkbox" name="interskol" id="filter-interskol">
+                <label for="filter-interskol">Интерскол</label>
+              </li>
+              <li>
+                <input type="checkbox" name="makita" id="filter-makita" checked>
+                <label for="filter-makita">Makita</label>
+              </li>
+              <li>
+                <input type="checkbox" name="dewalt" id="filter-dewalt">
+                <label for="filter-dewalt">DeWalt</label>
+              </li>
+              <li>
+                <input type="checkbox" name="hitachi" id="filter-hitachi">
+                <label for="filter-hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Питание</legend>
+            <ul>
+              <li>
+                <input type="radio" name="power-type" value="rechargeable-battery" id="filter-rechargeable-battery" checked>
+                <label for="filter-rechargeable-battery">Аккумуляторные</label>
+              </li>
+              <li>
+                <input type="radio" name="power-type" value="power-grid" id="filter-power-grid">
+                <label for="filter-power-grid">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section><!-- /.sorting -->
       <div>
         <article><!-- product-card -->
@@ -259,6 +317,16 @@
       </div><!-- footer /.bottom part -->
     </div><!-- /.container-->
   </footer>
+  <div><!-- "add to cart" modal -->
+    <button type="button" aria-label="close"></button>
+      <div>
+        <p>Товар добавлен в корзину!</p>
+      </div>
+      <div>
+        <a href="">Оформить заказ</a>
+        <a href="">Продолжить покупки</a>
+      </div>
+  </div><!-- /."add to cart" modal -->
 </body>
 
 </html>

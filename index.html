@@ -61,7 +61,7 @@
   <main>
     <div><!-- container -->
       <div><!-- product catalog -->
-        <h2>Каталог продукции</h2><!-- hidden header -->
+        <h2 class="visually-hidden">Каталог продукции</h2><!-- hidden header -->
         <div>
           <h3>Материалы</h3>
           <a href="">На любой вкус</a>
@@ -293,6 +293,27 @@
       </div><!-- /.footer bottom part -->
     </div><!-- /.container-->
   </footer>
+  <div><!-- "write us" modal -->
+    <button type="button" aria-label="close"></button>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label>Ваше имя:
+        <input type="text" name="username" placeholder="Имя Фамилия" required>
+      </label>
+      <label>Ваш e-mail:
+        <input type="email" name="user-email" placeholder="email@example.com" required>
+      </label>
+      <label>Текст письма:
+        <textarea name="user-message" placeholder="В свободной форме" required></textarea>
+      </label>
+      <button type="submit">Отправить</button> 
+    </form>
+  </div><!-- /."write us" modal -->
+  <div><!-- "map" modal -->
+    <button type="button" aria-label="close"></button>
+    <iframe
+      src="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323118%2C59.938635&sll=30.315635%2C59.938951&source=wizgeo&sspn=1.093140%2C0.524390&utm_medium=maps-desktop&utm_source=serp&z=16.99" width="943" height="449" aria-label="Как нас найти. Карта.">
+    </iframe>
+  </div><!-- /."map" modal -->
 </body>
 
 </html>
