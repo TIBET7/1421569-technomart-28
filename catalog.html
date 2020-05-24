@@ -13,10 +13,16 @@
         <a href="index.html">
           <img src="img/svg/logo-technomart.svg" width="220" height="47" alt='Логотип интернет-магазина "Техномарт"'>
         </a>
-        <form>Поиск</form>
-        <a href="">Закладки</a>
-        <a href="">Корзина</a>
-        <a href="">Оформить заказ</a>
+        <div><!-- search form container -->
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <input type="search" name="site-search-request" placeholder="Поиск:" aria-label="Поиск по сайту">
+          </form>
+        </div>
+        <div>
+          <a href="">Закладки</a>
+          <a href="">Корзина</a>
+          <a href="">Оформить заказ</a>
+        </div>
       </div><!-- /.header upper part-->
       <div><!-- header middle part -->
         <div>
@@ -96,9 +102,13 @@
             <li>
               <a href="">По функционалу</a>
             </li>
+            <li>
+              <a href="" aria-label="Сортировать по возрастанию"></a><!-- up-sort icon -->
+            </li>
+            <li>
+              <a href="" aria-label="Сортировать по убыванию"></a><!-- down-sort icon -->
+            </li>
           </ul>
-          <a href="" aria-label="sort ascending"></a><!-- up-sort icon -->
-          <a href="" aria-label="sort descending"></a><!-- down-sort icon -->
         </div><!-- /.sorting-block columns -->
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
@@ -318,7 +328,7 @@
     </div><!-- /.container-->
   </footer>
   <div><!-- "add to cart" modal -->
-    <button type="button" aria-label="close"></button>
+    <button type="button" aria-label="Закрыть окно"></button>
       <div>
         <p>Товар добавлен в корзину!</p>
       </div>
