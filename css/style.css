@@ -7,6 +7,7 @@
   --basic-green: #63A63E;
   --basic-grey: #3D546F;
   --basic-greylight: #C5C5C5;
+  --basic-greydark: #293449;
   --basic-yellow: #FFC047;
   --basic-background: #F1F5F7;
   --special-background: #F9F5F0;
@@ -17,7 +18,6 @@
   --special-yellowlight: #FFD180;
   --special-grey: #32425C;
   --special-light: #F3F7F9;
-  --hover-grey: #293449;
   --catalog-lightgray: #F2F6F8;
   --success:#5FBB2D;
   --warning:#FFBF47;
@@ -48,6 +48,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -57,6 +58,10 @@ a {
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+
+/* Common
+===================*/
 
 .visually-hidden {
   position: absolute;
@@ -81,6 +86,20 @@ a {
 .button-red:active {
   background-color: var(--special-red);
 }
+
+/* Main-grid
+===================*/
+.page {
+  height: 100%;
+}
+
+.page__body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+ align-content: start;
+}
+
 
 /* Header
 ===================*/
