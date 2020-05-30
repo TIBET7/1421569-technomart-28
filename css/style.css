@@ -1196,6 +1196,7 @@ a {
 
 .footer__contacts {
   margin-top: 30px;
+  margin-bottom: 54px;
   display: flex;
   flex-direction: column;
 
@@ -1248,18 +1249,54 @@ a {
 ===================*/
 
 .footer-bottom {
-  display: flex;
+  min-height: 107px;
+
+  background-color: var(--basic-greydark);
 }
 
-.copyright, 
-.feedback, 
-.developers {
+.footer-bottom-inner {
+  padding-top: 36px;
+
   display: flex;
+  outline: 2px solid red;
+}
+
+.copyright {
+  width: 389px;
+
+  display: flex;
+  flex-direction: column;
+
+  outline: 1px solid orangered;
+}
+
+.social {
+  width: 133px;
+
+  display: flex;
+
+  outline: 1px solid green;
+}
+
+.feedback {
+  margin-left: 118px;
+  width: 137px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.developers {
+  margin-left: 51px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .copyright__text,
 .feedback__text, 
 .developers__text {
+  margin: 0;
   font-size: 16px;
   line-height: 18px; 
   color: var(--basic-white);
