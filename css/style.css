@@ -492,7 +492,8 @@ a {
 ===================*/
 .main-offers {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(3, 123px);
   gap: 20px;
 
   margin-bottom: 500px;
@@ -515,6 +516,14 @@ a {
 
 .main-offers__item--equipment {
   background-color: var(--special-lilac);
+}
+
+.main-offers__item--discounts {
+  background-color: var(--special-greenlight);
+}
+
+.main-offers__item--delivery {
+  background-color: var(--basic-yellow);
 }
 
 .main-offers__item--name {
@@ -548,6 +557,16 @@ a {
 
 .description--equipment {
   padding: 10px 31px 10px 30px;
+  margin-left: 22px;
+}
+
+.description--discounts {
+  padding: 10px 23px 10px 22px;
+  margin-left: 23px;
+}
+
+.description--delivery {
+  padding: 10px 37px 10px 36px;
   margin-left: 22px;
 }
 
@@ -593,6 +612,43 @@ a {
   right: 31px;
 }
 
+.main-offers__item--discounts::after {
+  content: "";
+  width: 59px;
+  height: 72px;
+
+  background-image: url("/img/svg/icon-4.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  position: absolute;
+  top: 26px;
+  right: 45px;
+}
+
+.main-offers__item--delivery::after {
+  content: "";
+  width: 78px;
+  height: 63px;
+
+  background-image: url("/img/svg/icon-5.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  position: absolute;
+  top: 32px;
+  right: 31px;
+}
+
+
+
+
+
+
+.slider__window {
+  grid-column: 1/3;
+  grid-row: 2/4;
+}
 
 
 
@@ -621,8 +677,6 @@ a {
 .description--delivery:active {
   background-color: var(--active);
 }
-
-
 
 
 
