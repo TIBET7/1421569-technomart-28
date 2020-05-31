@@ -1110,16 +1110,18 @@ a {
 
 .services {
   margin-bottom: 70px;
-
-  
 }
 
 .services-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .services__title {
+ margin: 0;
+ margin-top: 64px;
+ margin-bottom: 25px;
  font-size: 30px; 
  line-height: 30px;
  text-transform: uppercase;
@@ -1128,6 +1130,7 @@ a {
 }
 
 .services__text {
+  margin: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -1135,7 +1138,31 @@ a {
   color: var(--basic-black);
 }
 
+.services__navigation-wrapper {
+  margin-top: 70px;
+
+  display: flex;
+  position: relative;
+}
+
+.services__navigation-wrapper::after {
+  content: "";
+  width: 468px;
+  height: 261px;
+
+  background-image: url("/img/png/delivery.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  position: absolute;
+  top: 22px;
+  right: 0px;
+}
+
 .services__navigation {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 100px;
   list-style: none;
 
   display: flex;
@@ -1195,6 +1222,42 @@ a {
 .services__item-description:active {
   color: var(--special-grey);
 }
+
+.service-description {
+  margin: 0;
+  margin-left: 80px;
+  width: 280px;
+  display: flex;
+}
+
+.service-description__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  color: var(--special-grey)
+}
+
+.service-description p {
+  margin: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+
+  color: var(--basic-black);
+}
+
+
+
+/* Temporary-hidden
+===================*/
+.temporary-hidden {
+  display: none;
+}
+
+
 
 /* Description
 ===================*/
@@ -1301,6 +1364,8 @@ a {
 }
 
 .button-red--contacts {
+  margin: 0;
+  padding-left: 62px;
   width: 300px;
   margin-top: 25px;
 }
