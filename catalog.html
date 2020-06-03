@@ -61,7 +61,7 @@
       <div class="breadcrumbs">
         <ul class="breadcrumbs__inner">
           <li>
-            <a class="breadcrumbs__item" href="index.html">Главная</a>
+            <a class="breadcrumbs__item visually-hidden" href="index.html">Главная</a>
           </li>
           <li>
             <a class="breadcrumbs__item" href="">Каталог</a>
@@ -82,16 +82,26 @@
         <section class="filtration"><!-- filtration -->
           <h3 class="filtration__title">Фильтр:</h3>
           <form action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="fieldset">
-              <legend class="legend-title">Цена</legend>
-              <input type="range" min="0" max="30000" step="1000">
-              <div>
-                <input type="text" name="min-price" placeholder="0">
-                <input type="text" name="max-price" placeholder="30000">
+            <fieldset class="price-filter">
+              <legend class="legend-title">Цена:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="width: 80%; margin-left: 10%"></div>
+                  </div>
+                  <div class="toggle togle-min" tabindex="0" style="left: 10%"></div>
+                  <div class="toggle togle-max" tabindex="0" style="left: 80%"></div>
+                </div>
+                <div class="price-controls">
+                    <input type="number" name="min-price" value="0" aria-label="Нижняя граница цены">
+                    <div class="range-decoration"></div>
+                    <input type="number" name="max-price" value="30000" aria-label="Верхняя граница цены">
+                </div>
               </div>
             </fieldset>
-            <fieldset class="fieldset">
-              <legend class="legend-title">Производители</legend>
+            <div class="form-decoration-line"></div>
+            <fieldset class="manufacturers-filter">
+              <legend class="legend-title">Производители:</legend>
               <ul class="manufacturers-list">
                 <li>
                   <input type="checkbox" name="bosch" id="filter-bosch" checked>
@@ -115,8 +125,9 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="fieldset">
-              <legend class="legend-title">Питание</legend>
+            <div class="form-decoration-line"></div>
+            <fieldset class="power-type-filter">
+              <legend class="legend-title">Питание:</legend>
               <ul class="power-type-list">
                 <li>
                   <input type="radio" name="power-type" value="rechargeable-battery" id="filter-rechargeable-battery" checked>
