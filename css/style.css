@@ -927,17 +927,16 @@ input[type='radio'].visually-hidden {
   cursor: pointer;
 }
 
-.slider__controls button:focus {
-  background-color: var(--basic-red);
-}
-
-
 .slide {
   display: none;
 }
 
 .slide--current {
   display: block;
+}
+
+.slider__controls .current {
+  background-color: var(--basic-red);
 }
 
 /* Best-sellers
