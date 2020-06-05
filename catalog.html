@@ -119,7 +119,7 @@
                 </li>
                 <li>
                   <label class="check" >
-                    <input class="check__input visually-hidden" type="checkbox" name="makita" checked disabled>
+                    <input class="check__input visually-hidden" type="checkbox" name="makita" checked>
                     <span class="check__box"></span>
                     Makita
                   </label>
@@ -133,24 +133,30 @@
                 </li>
                 <li>
                   <label class="check">
-                    <input class="check__input visually-hidden" type="checkbox" name="hitachi" disabled>
+                    <input class="check__input visually-hidden" type="checkbox" name="hitachi">
                     <span class="check__box"></span>
                     Hitachi
                  </label>  
                 </li>
               </ul>
             </fieldset>
-            <div class="form-decoration-line"></div>
+            <div class="form-decoration-line power-type-decoration-line"></div>
             <fieldset class="power-type-filter">
               <legend class="legend-title">Питание:</legend>
               <ul class="power-type-list">
                 <li>
-                  <input type="radio" name="power-type" value="rechargeable-battery" id="filter-rechargeable-battery" checked>
-                  <label class="label" for="filter-rechargeable-battery">Аккумуляторные</label>
+                  <label class="radio">
+                    <input class="radio__input visually-hidden" type="radio" name="power-type" value="rechargeable-battery"  checked>
+                    <span class="radio__button"></span>
+                    Аккумуляторные
+                </label>
                 </li>
                 <li>
-                  <input type="radio" name="power-type" value="power-grid" id="filter-power-grid">
-                  <label class="label" for="filter-power-grid">Сетевые</label>
+                  <label class="radio">
+                    <input class="radio__input visually-hidden" type="radio" name="power-type" value="power-grid">
+                    <span class="radio__button"></span>
+                    Сетевые
+                  </label>  
                 </li>
               </ul>
             </fieldset>
@@ -332,7 +338,7 @@
           <li><a href="">Компания</a></li>
           <li><a href="">Новости</a></li>
           <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="">Доставка</a></li>
+          <li class="nav-delivery"><a href="">Доставка</a></li>
           <li><a href="">Контакты</a></li>
         </ul>
       </div><!-- /.footer upper part -->
