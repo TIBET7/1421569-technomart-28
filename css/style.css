@@ -2610,6 +2610,7 @@ input[type='radio'].visually-hidden {
 
   bottom: 352px;
   left: 50%;
+  z-index: 20;
 
   display: none;
 }
@@ -2682,7 +2683,7 @@ input[type='radio'].visually-hidden {
   margin-right: 80px;
 }
 
-.modal-feedback-bottom {
+.modal-bottom {
   height: 112px;
   background-color: var(--modal-background);
   position: relative;
@@ -2711,6 +2712,8 @@ input[type='radio'].visually-hidden {
  top: 50%;
  left: 50%;
  z-index: 20;
+
+ display: none;
 }
 
 .modal-map p {
@@ -2719,3 +2722,82 @@ input[type='radio'].visually-hidden {
 .modal-map .modal-close {
   background-color: transparent;
 }
+
+/* Modal-add-to-cart
+===================*/
+
+.modal-add-to-cart {
+  margin: 0;
+  width: 620px;
+  height: 282px;
+  margin-top: -141px;
+  margin-left: -294px;
+
+  background-color: var(--basic-white);
+
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+
+  display: none;
+
+}
+
+.add-to-cart-text {
+  margin: 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-left: 177px;
+  margin-top: 68px;
+  margin-bottom: 67px;
+
+  position: relative;
+}
+
+.add-to-cart-text::before {
+  content: "";
+  width: 66px;
+  height: 66px;
+
+  background-image: url("../img/svg/icon-mark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  
+  position: absolute;
+  top: -19px;
+  left: -95px;
+
+}
+
+.button-wrapper {
+  position: relative;
+}
+
+.button--order {
+  padding: 10px 43px 9px 48px;
+
+  position: absolute;
+  z-index: 20;
+  left: 114px;
+  top: 38px;
+}
+
+
+.button--continue {
+  padding: 11px 29px 9px 34px;
+
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+
+  position: absolute;
+  left: 315px;
+  top: 38px;
+  z-index: 20;
+}
+
+
+
+
+
+

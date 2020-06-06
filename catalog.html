@@ -387,16 +387,16 @@
       </div><!-- /.container-->
     </div><!-- /.footer-bottom -->
   </footer>
-  <div class="add-to-cart-modal"><!-- "add to cart" modal -->
-    <button type="button" aria-label="Закрыть окно"></button>
-      <div>
-        <p>Товар добавлен в корзину!</p>
-      </div>
-      <div>
-        <a href="">Оформить заказ</a>
-        <a href="">Продолжить покупки</a>
-      </div>
-  </div><!-- /."add to cart" modal -->
+  <section class="modal modal-add-to-cart"><!-- "add to cart" modal -->
+    <div class="visually-hidden">Добавление товара в корзину</div>
+    <button class="modal-close" type="button" aria-label="Закрыть окно"></button>
+    <p class="add-to-cart-text">Товар добавлен в корзину!</p>
+    <div class="button-wrapper">
+      <a class="button-red button--order" href="">Оформить заказ</a>
+      <a class="button-red button--continue" href="">Продолжить покупки</a>
+    </div>
+    <div class="modal-bottom"></div>
+  </section><!-- /."add to cart" modal -->
 </body>
 
 </html>
