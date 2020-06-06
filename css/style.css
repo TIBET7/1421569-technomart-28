@@ -30,6 +30,7 @@
   --filter-bar: #00CA74;
   --filter-toggle: #ABABAB;
   --filter-toggle-box-shadow: #E0DDD9;
+  --price-controls-line: #444444;
   --form-button-border: #E5E5E5;
   --active: rgba(169, 169, 169, 0.3); 
   --active-light: rgba(255, 255, 255, 0.5);
@@ -384,7 +385,7 @@ input[type='radio'].visually-hidden {
   line-height: 30px;
   font-weight: bold;
   text-decoration: none;
-  border: 3px solid var(--basic-red);
+  border: 3px solid var(--basic-white);
 
   color: var(--basic-red);
 
@@ -562,7 +563,24 @@ input[type='radio'].visually-hidden {
 
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
+
+.main-header__user--orders::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+
+  background-color: var(--special-grey);
+
+  position: absolute;
+  top: 8px;
+  left: 89px;
+
+}
+
+
 
 .main-header__user--orders,
 .main-header__user--account {
@@ -589,8 +607,6 @@ input[type='radio'].visually-hidden {
 .main-header__navigation{
   background-color: var(--special-grey);
   box-shadow: inset 0px -5px 0px var(--hover-grey);
-
-  outline: 1px solid orangered;
 }
 
 .main-header__navigation-inner {
@@ -1524,7 +1540,7 @@ input[type='radio'].visually-hidden {
   margin-bottom: 10px;
   list-style:none;
 
-  outline: 1px solid orangered;
+  position: relative;
 }
 
 .description__subcontractors-item {
@@ -1536,6 +1552,29 @@ input[type='radio'].visually-hidden {
 
   color: var(--basic-black);
 }
+
+.description__subcontractors li::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+
+  background-color: var(--basic-red);
+
+  position: absolute;
+  top: 15px;
+  left: 0px;
+}
+
+.description__subcontractors li:nth-child(2)::before {
+  top: 49px;
+  left: 0px;
+}
+
+.description__subcontractors li:nth-child(3)::before {
+  top: 83px;
+  left: 0px;
+}
+
 
 .description-button {
   width: 220px;
@@ -2033,13 +2072,26 @@ input[type='radio'].visually-hidden {
 .price-controls {
   display: flex;
   justify-content: space-between;
+
+  position: relative;
 }
 
 
+.price-controls::before {
+  content: "";
+  width: 9px;
+  height: 1px;
 
-.price-controls .range-decoration {
+  background-color: var(--price-controls-line);
+
+
+  position: absolute;
+  top: 19px;
+  left: 105px;
+  
 
 }
+
 
 .price-controls input {
   font-family: "PT Sans", Arial, sans-serif;
