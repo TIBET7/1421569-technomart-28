@@ -112,7 +112,7 @@
               <a class="product-card__actions--bookmarks" href="">В закладки</a>
             </div><!-- /.hover -->
             <div class="product-card__image">
-              <img  src="img/jpg/bfg-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+              <img class="img-bfg-9000"  src="img/jpg/bfg-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
             </div>
             <h3 class="product-card__title">Перфоратор BOSCH BFG 9000</h3>
             <p class="product-card__basic-price"><del>32500 Р.</del></p>
@@ -125,7 +125,7 @@
               <a class="product-card__actions--bookmarks" href="">В закладки</a>
             </div><!-- /.hover -->
             <div class="product-card__image">
-              <img src="img/jpg/bfg-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+              <img class="img-bfg-3000" src="img/jpg/bfg-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
             </div>
             <h3 class="product-card__title best-sellers-item">Перфоратор BOSCH BFG 3000</h3>
             <p class="product-card__basic-price"><del>22500 Р.</del></p>
@@ -138,7 +138,7 @@
               <a class="product-card__actions--bookmarks" href="">В закладки</a>
             </div><!-- /.hover -->
             <div class="product-card__image">
-              <img src="img/jpg/bfg-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+              <img class="img-bfg-6000" src="img/jpg/bfg-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
             </div>
             <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
             <p class="product-card__basic-price"><del>30500 Р.</del></p>
@@ -151,7 +151,7 @@
               <a class="product-card__actions--bookmarks" href="">В закладки</a>
             </div><!-- /.hover -->
             <div class="product-card__image">
-              <img src="img/jpg/bfg-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+              <img class="img-bfg-2000" src="img/jpg/bfg-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
             </div>
             <h3 class="product-card__title best-sellers-item">Перфоратор BOSCH BFG 2000</h3>
             <p class="product-card__current-price">12500 Р.</p>
@@ -212,26 +212,24 @@
                 </li>
               </ul>
               <section class="service-description"><!-- slider2 -->
-                <div>
+                <div class="service-description__item delivery">
                   <h3 class="service-description__title">Доставка</h3>
-                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!</p>
+                  <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!</p>
                   <p>Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
                 </div>
+                <div class="service-description__item guarantee">
+                  <h3 class="service-description__title title--guarantee">Гарантия</h3>
+                  <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием, вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.</p>
+                  <p>Дом уж восстановите как-нибудь сами.</p>
+                </div>
+                <div class="credit">
+                  <h3 class="service-description__title title--credit">Кредит</h3>
+                  <p>Залезть в долговую яму стало проще!</p>
+                  <p>Кредитные консультанты придут вам на помощь.</p>
+                  <a class="button-red button-red--credit" href="">Отправить заявку</a>
+                </div>
               </section><!-- /.slider2 -->
-            </div>
-
-              <div class="temporary-hidden">
-                <h3>Гарантия</h3>
-                <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
-                <p>Дом уж восстановите как-нибудь сами.</p>
-              </div>
-              <div class="temporary-hidden">
-                <h3>Кредит</h3>
-                <p>Залезть в долговую яму стало проще!</p>
-                <p>Кредитные консультанты придут вам на помощь.</p>
-                <a href="">Отправить заявку</a>
-              </div>
-            
+            </div><!-- /.services__navigation-wrapper-->
           </section><!-- /.services -->
         </div><!-- /.container -->
       </div><!-- /.services__background -->
@@ -322,27 +320,31 @@
       </div><!-- /.container-->
     </div><!-- /.footer-bottom -->
   </footer>
-  <div class="feedback-modal"><!-- "write us" modal -->
-    <button type="button" aria-label="Закрыть окно"></button>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <label>Ваше имя:
-        <input type="text" name="username" placeholder="Имя Фамилия" required>
-      </label>
-      <label>Ваш e-mail:
-        <input type="email" name="user-email" placeholder="email@example.com" required>
-      </label>
-      <label>Текст письма:
+
+  <section class="modal modal-feedback"><!-- "write us" modal -->
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <button class="modal-close" type="button" aria-label="Закрыть окно"></button>
+    <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
+      <div class="feedback-contacts">
+        <label class="feedback-item">Ваше имя:
+          <input class="feedback-name" type="text" name="username" placeholder="Имя Фамилия" required>
+        </label>
+        <label class="feedback-item">Ваш e-mail:
+          <input class="feedback-email" type="email" name="user-email" placeholder="email@example.com" height="114px" required>
+        </label>
+      </div>
+      <label class="feedback-item feedback-item--textarea">Текст письма:
         <textarea name="user-message" placeholder="В свободной форме" required></textarea>
       </label>
-      <button type="submit">Отправить</button> 
+      <button class="button-red button--feedback" type="submit">Отправить</button> 
+      <div class="modal-feedback-bottom"></div>
     </form>
-  </div><!-- /."write us" modal -->
-  <div class="map-modal"><!-- "map" modal -->
-    <button type="button" aria-label="Закрыть окно"></button>
-    <iframe
-      src="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323118%2C59.938635&sll=30.315635%2C59.938951&source=wizgeo&sspn=1.093140%2C0.524390&utm_medium=maps-desktop&utm_source=serp&z=16.99" width="943" height="449" aria-label="Как нас найти. Карта.">
-    </iframe>
-  </div><!-- /."map" modal -->
+  </section><!-- /."write us" modal -->
+  <section class="modal modal-map"><!-- "map" modal -->
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <p><img src="./img/jpg/map.jpg" width="943" height="449" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
+    <button class="modal-close" type="button" aria-label="Закрыть окно"></button>
+  </section><!-- /."map" modal -->
 </body>
 
 </html>
