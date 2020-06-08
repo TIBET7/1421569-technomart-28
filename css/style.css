@@ -1416,8 +1416,6 @@ input[type='radio'].visually-hidden {
 
   display: flex;
   position: relative;
-
-  outline: 1px solid orangered;
 }
 
 .services__navigation {
@@ -1429,8 +1427,6 @@ input[type='radio'].visually-hidden {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  outline: 1px solid red;
 }
 
 .services__navigation::after {
@@ -1513,12 +1509,9 @@ input[type='radio'].visually-hidden {
   margin: 0;
   margin-left: 80px;
   width: 621px;
+
   display: flex;
-  
-
   position: relative;
-
-  outline: 1px solid green;
 }
 
 .delivery {
@@ -1526,8 +1519,6 @@ input[type='radio'].visually-hidden {
   background-image: url("../img/png/delivery.png");
   background-repeat: no-repeat;
   background-position: 150px 20px;
-
-  outline: 1px solid blue;
 }
 
 .guarantee {
@@ -1535,8 +1526,6 @@ input[type='radio'].visually-hidden {
   background-image: url("../img/png/guarantee.png");
   background-repeat: no-repeat;
   background-position: 240px 2px;
-
-  outline: 1px solid blue;
 }
 
 .credit {
@@ -1547,8 +1536,6 @@ input[type='radio'].visually-hidden {
 
   display: flex;
   flex-direction: column;
-
-  outline: 1px solid blue;
 }
 
 
@@ -1559,7 +1546,6 @@ input[type='radio'].visually-hidden {
   width: 468px;
   height: 261px;
 
-  background-color: orangered;
   background-image: url("../img/png/delivery.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1578,8 +1564,6 @@ input[type='radio'].visually-hidden {
   text-transform: uppercase;
 
   color: var(--special-grey);
-
-  outline: 1px solid orangered;
 }
 
 .title--guarantee {
@@ -1604,8 +1588,6 @@ input[type='radio'].visually-hidden {
   line-height: 24px;
 
   color: var(--basic-black);
-  
-  outline: 1px solid red;
 }
 
 .button-red--credit {
@@ -2009,18 +1991,16 @@ input[type='radio'].visually-hidden {
 .breadcrumbs__inner {
   margin: 0;
   padding: 0;
-  margin-top: 21px;
-  margin-bottom: 20px;
-  padding-left: 53px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  padding-left: 55px;
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   list-style: none;
   min-height: 18px;
-  /*temporary border*/
-  border: 1px solid black;
-
+  
   position: relative;
 }
 
@@ -2043,7 +2023,7 @@ input[type='radio'].visually-hidden {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  margin-right: 43px;
+  margin-right: 42px;
   text-transform: uppercase;
 
   color: var(--basic-black);
@@ -2109,10 +2089,7 @@ input[type='radio'].visually-hidden {
   width: 220px;
 
   display: flex;
-  flex-direction: column;
-
-  outline: 1px solid blue;
-  
+  flex-direction: column;  
 }
 
 .filtration__title {
@@ -2450,8 +2427,6 @@ input[type='radio'].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-
-  outline: 1px solid red;
 }
 
 .sorting__title {
@@ -2500,6 +2475,12 @@ input[type='radio'].visually-hidden {
   opacity: 1;
 }
 
+.price-sorting {
+  color: var(--basic-red);
+  opacity: 1;
+  border: none;
+}
+
 .type-sorting {
   margin-left: 70px;
 }
@@ -2513,7 +2494,7 @@ input[type='radio'].visually-hidden {
   width: 11px;
   height: 10px;
   
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23C5C5C5' d='M5.5 0L0 10h11z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23EE3643' d='M5.5 0L0 10h11z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 0 0;
 
@@ -2563,8 +2544,6 @@ input[type='radio'].visually-hidden {
   grid-template-columns: repeat(3, 220px);
   column-gap: 20px;
   row-gap: 18px;
-
-  outline: 1px solid green;
 }
 
 
@@ -2578,13 +2557,16 @@ input[type='radio'].visually-hidden {
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  outline: 1px solid orangered;
 }
 
 .pagination__item {
-  margin-left: 10px;
-  margin-top: 50px;
+  margin-right: 10px;
+  margin-top: 47px;
+  margin-bottom: 2px;
   padding: 10px 15px;
+  width: 38px;
+  height: 38px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -2595,9 +2577,16 @@ input[type='radio'].visually-hidden {
 
 .pagination__item:first-child {
   margin-left: 0;
+  width: 38px;
+  height: 38px;
+  border: none;
+
+  color: var(--basic-white);
+  background-color: var(--basic-red);
 }
 
 .pagination__item:last-child {
+  width: 140px;
   padding: 10px 31px;
   text-transform: uppercase;
 }
@@ -2633,7 +2622,7 @@ input[type='radio'].visually-hidden {
 .perforators-description__title {
   margin: 0;
   padding: 0;
-  margin-top: 64px;
+  margin-top: 62px;
   margin-bottom: 25px;
   font-size: 30px;
   line-height: 30px;
