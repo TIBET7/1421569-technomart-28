@@ -102,7 +102,7 @@
       <section class="best-sellers">
         <div class="best-sellers__top-wrapper">
           <h2 class="best-sellers__title">Популярные товары:</h2>
-          <a class="best-sellers__link button-red" href="">Все популярные товары</a>
+          <a class="best-sellers__link button" href="">Все популярные товары</a>
         </div>
         <div class="best-sellers__bottom-wrapper">
           <article class="product-card">
@@ -161,7 +161,7 @@
       <section class="popular-brands">
         <div class="popular-brands__top-wrapper">
           <h2 class="popular-brands__title">Популярные производители:</h2>
-          <a class="popular-brands__link button-red" href="">Все производители</a>
+          <a class="popular-brands__link button" href="">Все производители</a>
         </div>
         <div class="popular-brands__inner">
           <a class="popular-brands__item" href="">
@@ -226,7 +226,7 @@
                   <h3 class="service-description__title title--credit">Кредит</h3>
                   <p>Залезть в долговую яму стало проще!</p>
                   <p>Кредитные консультанты придут вам на помощь.</p>
-                  <a class="button-red button-red--credit" href="">Отправить заявку</a>
+                  <a class="button button--credit" href="">Отправить заявку</a>
                 </div>
               </section><!-- /.slider2 -->
             </div><!-- /.services__navigation-wrapper-->
@@ -246,7 +246,7 @@
               <li class="description__subcontractors-item">Автотрейдинг</li>
               <li class="description__subcontractors-item">ЖелДорЭкспедиция</li>
             </ul>
-            <a class="button-red description-button" href="">Подробнее о компании</a>
+            <a class="button description-button" href="">Подробнее о компании</a>
           </section><!-- /.advantages -->
           <section class="contacts">
             <h2 class="contacts__title">Контакты</h2>
@@ -255,7 +255,7 @@
               href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323118%2C59.938635&sll=30.315635%2C59.938951&source=wizgeo&sspn=1.093140%2C0.524390&utm_medium=maps-desktop&utm_source=serp&z=16.99">
               <img src="img/png/company-contacts-map.png" width="300" height="158" alt="Как нас найти. Карта.">
             </a>
-            <a class="button-red button-red--contacts" href="#">Заблудились? Напишите нам!</a>
+            <a class="button button--feedback" href="#">Заблудились? Напишите нам!</a>
           </section><!-- /.contacts -->
       </div><!-- /.description-wrapper-->
     </div>
@@ -336,7 +336,7 @@
       <label class="feedback-item feedback-item--textarea">Текст письма:
         <textarea name="user-message" placeholder="В свободной форме" required></textarea>
       </label>
-      <button class="button-red button--feedback" type="submit">Отправить</button> 
+      <button class="button modal-button--feedback" type="submit">Отправить</button> 
       <div class="modal-bottom"></div>
     </form>
   </section><!-- /."write us" modal -->
@@ -345,6 +345,16 @@
     <p><img src="./img/jpg/map.jpg" width="943" height="449" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
     <button class="modal-close" type="button" aria-label="Закрыть окно"></button>
   </section><!-- /."map" modal -->
+  <script>
+    let link = document.querySelector(".contacts .button--feedback");
+    let popup = document.querySelector(".modal-feedback");
+    let close = document.querySelector(".modal-close");
+
+    link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+    });
+  </script>
 </body>
 
 </html>

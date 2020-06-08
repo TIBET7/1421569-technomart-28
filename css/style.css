@@ -94,7 +94,7 @@ input[type='radio'].visually-hidden {
   padding: 0 10px;
 }
 
-.button-red {
+.button {
   font-size: 14px;
   line-height: 18px;
   width: 192px;
@@ -106,7 +106,7 @@ input[type='radio'].visually-hidden {
   background-color: var(--basic-red);
 }
 
-.button-red:active {
+.button:active {
   background-color: var(--special-red);
 }
 
@@ -1590,7 +1590,7 @@ input[type='radio'].visually-hidden {
   color: var(--basic-black);
 }
 
-.button-red--credit {
+.button--credit {
   width: 195px;
   margin-top: 26px;
   padding: 11px 44px 9px 45px;
@@ -1730,7 +1730,7 @@ input[type='radio'].visually-hidden {
   color: var(--basic-black);
 }
 
-.button-red--contacts {
+.button--feedback {
   margin: 0;
   padding: 10px 38px 10px 62px;
   width: 300px;
@@ -1977,13 +1977,6 @@ input[type='radio'].visually-hidden {
   color: var(--basic-red);
 }
 
-.feedback-modal {
-  display: none;
-}
-
-.map-modal {
-  display: none;
-}
 
 /* Catalog-page
 ===================*/
@@ -2657,6 +2650,10 @@ input[type='radio'].visually-hidden {
   border-top: 7px solid var(--basic-red);
 }
 
+.modal-show {
+  display: block;
+}
+
 /* Modal-feedback
 ===================*/
 
@@ -2749,7 +2746,7 @@ input[type='radio'].visually-hidden {
   position: relative;
 }
 
-.button--feedback {
+.modal-button--feedback {
   width: 460px;
   margin-left: 78px;
   margin-top: 38px;
