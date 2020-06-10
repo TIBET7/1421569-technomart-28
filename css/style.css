@@ -198,7 +198,7 @@ input[type='radio'].visually-hidden {
 
   position: absolute;
   top: 12px;
-  left: 17px;
+  left: 3px;
 }
 
 .header__search form:hover::before {
@@ -211,7 +211,7 @@ input[type='radio'].visually-hidden {
 
 .header__search input {
   padding: 0;
-  padding-left: 42px;
+  padding-left: 28px;
   width: 270px;
   min-height: 42px;
   border: none;
@@ -252,14 +252,14 @@ input[type='radio'].visually-hidden {
   background-position: 0 0;
 
   position: absolute;
-  left: 20px;
+  left: 6px;
   top: 13px;
 }
 
 .bookmarks {
   width: 150px;
   min-height: 42px;
-  padding: 9px 24px 9px 43px;
+  padding: 9px 24px 9px 29px;
 
   position: relative;
 }
@@ -275,16 +275,20 @@ input[type='radio'].visually-hidden {
   opacity: 0.3;
 
   position: absolute;
-  left: 26px;
+  left: 12px;
   top: 13px;
 }
 
 .cart{
-  width: 150px;
+  width: 136px;
   min-height: 42px;
-  padding: 9px 26px 9px 49px;
+  padding: 9px 5px 9px 35px;
 
   position: relative;
+}
+
+.cart--catalog {
+  background-color: var(--basic-red);
 }
 
 .bookmarks:active,
@@ -1049,7 +1053,8 @@ input[type='radio'].visually-hidden {
   position: relative;
 }
 
-.product-card .flag {
+.product-card .flag,
+.main-offers__item .flag {
   width: 70px;
   height: 70px;
 
@@ -1060,7 +1065,8 @@ input[type='radio'].visually-hidden {
   overflow: hidden;
 }
 
-.product-card .flag--new {
+.product-card .flag--new,
+.main-offers__item .flag--new {
   background-image: url("../img/png/flag-new.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -2644,6 +2650,11 @@ input[type='radio'].visually-hidden {
 
 .modal {
   position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
   color: var(--basic-black);
   background-color: var(--basic-white);
   box-shadow: 0px 20px 40px var(--modal-shadow);
@@ -2652,6 +2663,12 @@ input[type='radio'].visually-hidden {
 
 .modal-show {
   display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 /* Modal-feedback
@@ -2661,14 +2678,16 @@ input[type='radio'].visually-hidden {
   width: 620px;
   min-height: 430px;
   margin-left: -318px;
+  margin-top: 150px;
+  margin-bottom: auto;
   padding-top: 39px;
  
-
   bottom: 352px;
   left: 50%;
   z-index: 20;
 
   display: none;
+ 
 }
 
 .modal-close {
@@ -2773,8 +2792,8 @@ input[type='radio'].visually-hidden {
  display: none;
 }
 
-.modal-map p {
-  margin: 0;
+.modal-map iframe {
+  border: none;
 }
 .modal-map .modal-close {
   background-color: transparent;
@@ -2853,8 +2872,21 @@ input[type='radio'].visually-hidden {
   z-index: 20;
 }
 
+/* Modal-animation
+===================*/
 
+@keyframes bounce {
+  0% {transform: translateY(-2000px);}
+  70% {transform: translateY(30px);}
+  90% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+}
 
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
 
 
 

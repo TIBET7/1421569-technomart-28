@@ -58,14 +58,17 @@
       <section class="main-offers">
         <h2 class="visually-hidden">Предложения</h2><!-- hidden header -->
         <div class="main-offers__item main-offers__item--materials">
+          <div class="flag flag--new"><span class="visually-hidden">Новинка</span></div>
           <h3 class="main-offers__item--name">Материалы</h3>
           <a class="main-offers__item--description description--materials" href="">На любой вкус</a>
         </div>
         <div class="main-offers__item main-offers__item--tools">
+          <div class="flag"><span class="visually-hidden">Новинка</span></div>
           <h3 class="main-offers__item--name">Инструмент</h3>
           <a class="main-offers__item--description description--tools" href="">На все случаи</a>
         </div>
         <div class="main-offers__item main-offers__item--equipment">
+          <div class="flag"><span class="visually-hidden">Новинка</span></div>
           <h3 class="main-offers__item--name" >Техника</h3>
           <a class="main-offers__item--description description--equipment" href="">Для стройки</a>
         </div>
@@ -91,10 +94,12 @@
           </div>
         </section><!-- /.slider -->
         <div class="main-offers__item main-offers__item--discounts">
+          <div class="flag"><span class="visually-hidden">Новинка</span></div>
           <h3 class="main-offers__item--name">Скидки 50%</h3>
           <a class="main-offers__item--description description--discounts" href="">На 350 товаров</a>
         </div>
         <div class="main-offers__item main-offers__item--delivery">
+          <div class="flag"><span class="visually-hidden">Новинка</span></div>
           <h3 class="main-offers__item--name">Доставка</h3>
           <a class="main-offers__item--description description--delivery" href="">Бесплатно</a>
         </div> 
@@ -251,9 +256,8 @@
           <section class="contacts">
             <h2 class="contacts__title">Контакты</h2>
             <p class="contacts__text">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-            <a
-              href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323118%2C59.938635&sll=30.315635%2C59.938951&source=wizgeo&sspn=1.093140%2C0.524390&utm_medium=maps-desktop&utm_source=serp&z=16.99">
-              <img src="img/png/company-contacts-map.png" width="300" height="158" alt="Как нас найти. Карта.">
+            <a class="contacts__map" href="">
+              <img src="img/png/company-contacts-map.png" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
             </a>
             <a class="button button--feedback" href="#">Заблудились? Напишите нам!</a>
           </section><!-- /.contacts -->
@@ -330,7 +334,7 @@
           <input class="feedback-name" type="text" name="username" placeholder="Имя Фамилия" required>
         </label>
         <label class="feedback-item">Ваш e-mail:
-          <input class="feedback-email" type="email" name="user-email" placeholder="email@example.com" height="114px" required>
+          <input class="feedback-email" type="email" name="user-email" placeholder="email@example.com" required>
         </label>
       </div>
       <label class="feedback-item feedback-item--textarea">Текст письма:
@@ -341,20 +345,12 @@
     </form>
   </section><!-- /."write us" modal -->
   <section class="modal modal-map"><!-- "map" modal -->
-    <h2 class="visually-hidden">Как до нас добраться</h2>
-    <p><img src="./img/jpg/map.jpg" width="943" height="449" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
+    <h2 class="visually-hidden">Как до нас добраться</h2> 
     <button class="modal-close" type="button" aria-label="Закрыть окно"></button>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1591646609570!5m2!1sru!2sru" width="943" height="449" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
   </section><!-- /."map" modal -->
-  <script>
-    let link = document.querySelector(".contacts .button--feedback");
-    let popup = document.querySelector(".modal-feedback");
-    let close = document.querySelector(".modal-close");
-
-    link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.add("modal-show");
-    });
-  </script>
+  <script src="js/popup-feedback.js"></script>
+  <script src="js/popup-map.js"></script>
 </body>
 
 </html>
