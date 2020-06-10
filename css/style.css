@@ -327,7 +327,7 @@ input[type='radio'].visually-hidden {
 ===================*/
 
 .main-header__middle-inner {
-  height: 158px;
+  min-height: 158px;
 
   display: flex;
   flex-wrap: wrap;
@@ -1163,7 +1163,7 @@ input[type='radio'].visually-hidden {
 
 .product-card__actions {
   width: 218px;
-  height: 178px;
+  min-height: 178px;
 
   background-color: var(--basic-white);
 
@@ -1424,7 +1424,7 @@ input[type='radio'].visually-hidden {
 .services__item,
 .services__item--active {
   width: 240px;
-  height: 62px;
+  min-height: 62px;
 
   background-color: var(--special-grey);
   box-shadow: 0px 1px 0px var(--basic-greylight), inset 0px 1px 0px var(--special-grey-light);
@@ -2354,7 +2354,7 @@ input[type='radio'].visually-hidden {
 
 .form-button {
   width: 220px;
-  height: 38px;
+  min-height: 38px;
   margin-top: 22px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -2512,7 +2512,7 @@ input[type='radio'].visually-hidden {
   margin-bottom: 2px;
   padding: 10px 15px;
   width: 38px;
-  height: 38px;
+  min-height: 38px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -2530,8 +2530,6 @@ input[type='radio'].visually-hidden {
 
 .pagination__item:first-child {
   margin-left: 0;
-  width: 38px;
-  height: 38px;
 }
 
 .pagination__item:last-child {
@@ -2712,7 +2710,7 @@ input[type='radio'].visually-hidden {
 }
 
 .modal-bottom {
-  height: 112px;
+  min-height: 112px;
   background-color: var(--modal-background);
   position: relative;
 }
@@ -2757,7 +2755,7 @@ input[type='radio'].visually-hidden {
 .modal-add-to-cart {
   margin: 0;
   width: 620px;
-  height: 282px;
+  min-height: 282px;
   margin-top: -141px;
   margin-left: -294px;
 
