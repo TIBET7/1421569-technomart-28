@@ -79,7 +79,8 @@ input[type='radio'].visually-hidden {
   padding: 0;
   border: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 
@@ -121,6 +122,7 @@ input[type='radio'].visually-hidden {
   min-height: 100%;
 
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -217,6 +219,20 @@ input[type='radio'].visually-hidden {
   border: none;
 
   background-color: var(--basic-greydark);
+}
+
+.header__search input::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 24px;
+
+  color: var(--basic-white);
+}
+
+.header__search input::-moz-placeholder {
+  font-size: 18px;
+  line-height: 24px;
+
+  color: var(--basic-white);
 }
 
 .header__search input::placeholder {
@@ -2056,8 +2072,10 @@ input[type='radio'].visually-hidden {
 
 .filtration-sorting-wrapper {
   display: grid;
+  grid-template-columns: -webkit-min-content -webkit-min-content;
   grid-template-columns: min-content min-content;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 
 .filtration {
@@ -2494,7 +2512,8 @@ input[type='radio'].visually-hidden {
 .catalog {
   display: grid;
   grid-template-columns: repeat(3, 220px);
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 18px;
 }
 
@@ -2610,15 +2629,7 @@ input[type='radio'].visually-hidden {
   border-top: 7px solid var(--basic-red);
 }
 
-.modal-show {
-  display: block;
 
-  animation: bounce 0.6s;
-}
-
-.modal-error {
-  animation: shake 0.6s;
-}
 
 /* Modal-feedback
 ===================*/
@@ -2679,6 +2690,26 @@ input[type='radio'].visually-hidden {
   border-radius: 2px;
 
   background-color: var(--basic-white);
+}
+
+.form-feedback input::-webkit-input-placeholder, .form-feedback textarea::-webkit-input-placeholder{
+  padding-top: 4px;
+  padding-left: 8px;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", Arial, sans-serif;
+
+  color: var(--price-basic)
+}
+
+.form-feedback input::-moz-placeholder, .form-feedback textarea::-moz-placeholder{
+  padding-top: 4px;
+  padding-left: 8px;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", Arial, sans-serif;
+
+  color: var(--price-basic)
 }
 
 .form-feedback input::placeholder,
@@ -2753,11 +2784,11 @@ input[type='radio'].visually-hidden {
 ===================*/
 
 .modal-add-to-cart {
-  margin: 0;
   width: 620px;
-  min-height: 282px;
+  height: 282px;
   margin-top: -141px;
   margin-left: -294px;
+  margin-bottom: auto;
 
   background-color: var(--basic-white);
 
@@ -2820,8 +2851,40 @@ input[type='radio'].visually-hidden {
   z-index: 20;
 }
 
+
+
+
+
+.modal-show {
+  display: block;
+
+  -webkit-animation: bounce 0.6s;
+
+          animation: bounce 0.6s;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
+}
+
+
+
+
+
+
+
+
+
 /* Modal-animation
 ===================*/
+
+@-webkit-keyframes bounce {
+  0% {transform: translateY(-2000px);}
+  70% {transform: translateY(30px);}
+  90% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+}
 
 @keyframes bounce {
   0% {transform: translateY(-2000px);}
@@ -2830,11 +2893,16 @@ input[type='radio'].visually-hidden {
   100% {transform: translateY(0);}
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
   0%, 100% {transform: translateX(0);}
   10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
   20%, 40%, 60%, 80% {transform: translateX(10px);}
 }
 
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
 
 

@@ -8,7 +8,6 @@ let userMessage = popup.querySelector('[name=user-message');
 let isStorageSupport = true;
 let storage = "";
 
-
 try{
   storage = localStorage.getItem('username');
 } catch (err) {
@@ -51,6 +50,50 @@ window.addEventListener('keydown', (evt) => {
       evt.preventDefault();
       popup.classList.remove('modal-show');
       popup.classList.remove('modal-error');
+    }
+  }
+});
+
+let mapLink = document.querySelector('.contacts__map');
+let mapPopup = document.querySelector('.modal-map');
+let mapClose = mapPopup.querySelector('.modal-close');
+
+mapLink.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  mapPopup.classList.add('modal-show');
+});
+mapClose.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  mapPopup.classList.remove('modal-show');
+});
+window.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === 27) {
+    if (mapPopup.classList.contains('modal-show')) {
+      evt.preventDefault();
+      mapPopup.classList.remove('modal-show');
+    }
+  }
+});
+
+let cartLink = document.querySelectorAll('.product-card__actions--buy');
+let cartPopup = document.querySelector('.modal-add-to-cart');
+let cartClose = cartPopup.querySelector('.modal-close');
+
+cartLink.forEach((button) => {
+button.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  cartPopup.classList.add('modal-show');
+});
+});
+cartClose.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  cartPopup.classList.remove('modal-show');
+});
+window.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === 27) {
+    if (cartPopup.classList.contains('modal-show')) {
+      evt.preventDefault();
+      cartPopup.classList.remove('modal-show');
     }
   }
 });
