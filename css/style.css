@@ -232,12 +232,13 @@ input[type='radio'].visually-hidden {
   font-size: 18px;
   line-height: 24px;
 
+  opacity: 1;
   color: var(--basic-white);
 }
 
 .header__search input::placeholder {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 40px;
 
   color: var(--basic-white);
 }
@@ -2685,31 +2686,13 @@ input[type='radio'].visually-hidden {
 .form-feedback input,
 .form-feedback textarea{
   margin-top: 10px;
+  -moz-padding-left: 12px;
+  padding-left: 4px;
   width: 220px;
   border: 2px solid var(--basic-greylight);
   border-radius: 2px;
 
   background-color: var(--basic-white);
-}
-
-.form-feedback input::-webkit-input-placeholder, .form-feedback textarea::-webkit-input-placeholder{
-  padding-top: 4px;
-  padding-left: 8px;
-  font-size: 13px;
-  line-height: 24px;
-  font-family: "PT Sans", Arial, sans-serif;
-
-  color: var(--price-basic)
-}
-
-.form-feedback input::-moz-placeholder, .form-feedback textarea::-moz-placeholder{
-  padding-top: 4px;
-  padding-left: 8px;
-  font-size: 13px;
-  line-height: 24px;
-  font-family: "PT Sans", Arial, sans-serif;
-
-  color: var(--price-basic)
 }
 
 .form-feedback input::placeholder,
@@ -2720,7 +2703,30 @@ input[type='radio'].visually-hidden {
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
 
-  color: var(--price-basic)
+  color: var(--price-basic);
+}
+
+.form-feedback input::-webkit-input-placeholder, .form-feedback textarea::-webkit-input-placeholder{
+  padding-top: 4px;
+  padding-left: 8px;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", Arial, sans-serif;
+
+  color: var(--price-basic);
+}
+
+.form-feedback input::-moz-placeholder, .form-feedback textarea::-moz-placeholder{
+  padding: 0;
+  margin: 0;
+  padding-top: 4px;
+  padding-left: 8px;
+  font-size: 13px;
+  line-height: 30px;
+  font-family: "PT Sans", Arial, sans-serif;
+  opacity: 1;
+ 
+  color: var(--price-basic);
 }
 
 .form-feedback input {
