@@ -406,7 +406,7 @@ input[type='radio'].visually-hidden {
   position: relative;
 }
 
-.main-header-adress {
+.main-header__adress {
   margin: 0;
   margin-top: 3px;
   padding-left: 10px;
