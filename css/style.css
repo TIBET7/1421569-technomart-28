@@ -155,7 +155,7 @@ input[type='radio'].visually-hidden {
 
 .main-header__logo {
   margin: 0;
-  margin-right: auto;
+  
   margin-bottom: -5px;
   min-height: 47px;
   width: 220px;
@@ -175,7 +175,7 @@ input[type='radio'].visually-hidden {
 .header__search {
   min-height: 42px;
   min-height: 42px;
-  width: 270px;
+  width: 284px;
 
   position: relative;
 }
@@ -188,32 +188,9 @@ input[type='radio'].visually-hidden {
   flex-wrap: wrap;
 }
 
-.header__search form::before {
-  content: "";
-  width: 17px;
-  height: 17px;
-
-  background-image: url("../img/svg/icon-search.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 0.3;
-
-  position: absolute;
-  top: 12px;
-  left: 3px;
-}
-
-.header__search form:hover::before {
-  opacity: 1;
-}
-
-.header__search form:active::before {
- opacity: 0.3;
-}
-
 .header__search input {
   padding: 0;
-  padding-left: 28px;
+  padding-left: 42px;
   width: 270px;
   min-height: 42px;
   border: none;
@@ -246,7 +223,30 @@ input[type='radio'].visually-hidden {
 .header__search input:focus {
   background-color: var(--basic-white);
   color: var(--basic-black);
+  outline: none;
 }
+
+.search-field + svg {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 17px;
+  height: 17px;
+  opacity: 0.3;
+}
+
+.search-field:hover + svg {
+  opacity: 1;
+}
+
+.search-field:focus + svg {
+  opacity: 1;
+}
+
+.search-field:focus + svg path {
+  fill: var(--basic-red);
+}
+
 
 /* Header__user-links
 ===================*/
@@ -2686,8 +2686,8 @@ input[type='radio'].visually-hidden {
 .form-feedback input,
 .form-feedback textarea{
   margin-top: 10px;
-  -moz-padding-left: 12px;
-  padding-left: 4px;
+  
+  padding-left: 10px;
   width: 220px;
   border: 2px solid var(--basic-greylight);
   border-radius: 2px;
@@ -2695,10 +2695,12 @@ input[type='radio'].visually-hidden {
   background-color: var(--basic-white);
 }
 
+.form-feedback textarea {
+  padding-top: 5px;
+}
+
 .form-feedback input::placeholder,
 .form-feedback textarea::placeholder{
-  padding-top: 4px;
-  padding-left: 8px;
   font-size: 13px;
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -2707,8 +2709,6 @@ input[type='radio'].visually-hidden {
 }
 
 .form-feedback input::-webkit-input-placeholder, .form-feedback textarea::-webkit-input-placeholder{
-  padding-top: 4px;
-  padding-left: 8px;
   font-size: 13px;
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -2719,8 +2719,6 @@ input[type='radio'].visually-hidden {
 .form-feedback input::-moz-placeholder, .form-feedback textarea::-moz-placeholder{
   padding: 0;
   margin: 0;
-  padding-top: 4px;
-  padding-left: 8px;
   font-size: 13px;
   line-height: 30px;
   font-family: "PT Sans", Arial, sans-serif;
