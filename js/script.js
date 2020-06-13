@@ -1,4 +1,48 @@
 if (document.querySelector('.main-index')) {
+  let services = document.querySelector('.services');
+  let servicesLink = services.querySelectorAll('.services__item-description');
+  let serviceDescription = services.querySelectorAll('.service-description__item ');
+  let delivery = services.querySelector('.service--delivery');
+  let guarantee = services.querySelector('.service--guarantee');
+  let credit = services.querySelector('.service--credit');
+
+  delivery.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    for (let i = 0; i < servicesLink.length; i += 1) {
+      servicesLink[i].classList.remove('services__item-description--current');
+    }
+    for (let i = 0; i < serviceDescription.length; i += 1) {
+      serviceDescription[i].classList.remove('service-description__item--current');
+    }
+    servicesLink[0].classList.add('services__item-description--current');
+    serviceDescription[0].classList.add('service-description__item--current');
+  });
+
+  guarantee.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    for (let i = 0; i < servicesLink.length; i += 1) {
+      servicesLink[i].classList.remove('services__item-description--current');
+    }
+    for (let i = 0; i < serviceDescription.length; i += 1) {
+      serviceDescription[i].classList.remove('service-description__item--current');
+    }
+    servicesLink[1].classList.add('services__item-description--current');
+    serviceDescription[1].classList.add('service-description__item--current');
+  });
+  credit.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    for (let i = 0; i < servicesLink.length; i += 1) {
+      servicesLink[i].classList.remove('services__item-description--current');
+    }
+    for (let i = 0; i < serviceDescription.length; i += 1) {
+      serviceDescription[i].classList.remove('service-description__item--current');
+    }
+    servicesLink[2].classList.add('services__item-description--current');
+    serviceDescription[2].classList.add('service-description__item--current');
+  });
+
+
+
   let button = document.querySelector('.button--feedback');
   let popup = document.querySelector('.modal-feedback');
   let close = document.querySelector('.modal-close');

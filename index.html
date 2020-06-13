@@ -58,6 +58,7 @@
     <div class="container"><!-- container -->
       <section class="main-offers">
         <h2 class="visually-hidden">Предложения</h2><!-- hidden header -->
+        
         <div class="main-offers__item main-offers__item--materials">
           <div class="flag flag--new"><span class="visually-hidden">Новинка</span></div>
           <h3 class="main-offers__item--name">Материалы</h3>
@@ -207,18 +208,18 @@
             </div>
             <div class="services__navigation-wrapper">
               <ul class="services__navigation">
-                <li class="services__item--active">
-                  <a class="services__item-description--active" href="">Доставка</a>
+                <li class="services__item">
+                  <a class="services__item-description services__item-description--currrent service--delivery " href="">Доставка</a>
                 </li>
                 <li class="services__item">
-                  <a class="services__item-description" href="">Гарантия</a>
+                  <a class="services__item-description service--guarantee "  href="">Гарантия</a>
                 </li>
                 <li class="services__item"> 
-                  <a class="services__item-description" href="">Кредит</a>
+                  <a class="services__item-description service--credit" href="">Кредит</a>
                 </li>
               </ul>
               <section class="service-description"><!-- slider2 -->
-                <div class="delivery">
+                <div class="service-description__item delivery service-description__item--current">
                   <h3 class="service-description__title">Доставка</h3>
                   <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!</p>
                   <p>Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
@@ -231,7 +232,7 @@
                 <div class="service-description__item credit">
                   <h3 class="service-description__title title--credit">Кредит</h3>
                   <p>Залезть в долговую яму стало проще!</p>
-                  <p>Кредитные консультанты придут вам на помощь.</p>
+                  <p class="credit-text">Кредитные консультанты придут вам на помощь.</p>
                   <a class="button button--credit" href="">Отправить заявку</a>
                 </div>
               </section><!-- /.slider2 -->
@@ -266,7 +267,6 @@
     </div>
   </main>
   <footer class="main-footer">
-    
     <div class="container"><!-- container -->
       <div class="main-footer-top"><!-- footer upper part -->
         <a class="main-footer__logo" href="index.html">
@@ -360,7 +360,7 @@
     </div>
     <div class="modal-bottom"></div>
   </section><!-- /."add to cart" modal -->
-  <script src="js/scripts.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
