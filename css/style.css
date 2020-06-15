@@ -426,20 +426,8 @@ input[type='radio'].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
 
-.main-header__login--enter::before {
-  content: "";
-  width: 20px;
-  height: 17px;
-
-  background-image: url("../img/svg/icon-login.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-  position: absolute;
-  top: 14px;
-  left: 18px;
+  position: relative;
 }
 
 .main-header__login--enter {
@@ -455,15 +443,12 @@ input[type='radio'].visually-hidden {
   background-color: var(--basic-white);
   
   position: relative;
-  
 }
 
-.main-header__login--enter:hover::before {
-  background-image: url("../img/svg/icon-login-dark.svg");
-}
-
-.main-header__login--enter:active::before {
-  background-image: url("../img/svg/icon-login.svg");
+.main-header__login-icon {
+  position: absolute;
+  top: 15px;
+  left: 17px;
 }
 
 .main-header__login--registration{
@@ -488,6 +473,14 @@ input[type='radio'].visually-hidden {
   color: var(--basic-greylight);
 } 
 
+.main-header__login--enter:hover path {
+  fill: var(--basic-grey);
+}
+
+.main-header__login--enter:active path {
+  fill: var(--basic-greylight);
+}
+
 /* Main-header__user (catalog.html)
 ===================*/
 
@@ -500,6 +493,8 @@ input[type='radio'].visually-hidden {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  position: relative;
 }
 
 .main-header__user--login {
@@ -515,58 +510,17 @@ input[type='radio'].visually-hidden {
   position: relative;
 }
 
-.main-header__user--login::before {
-  content: "";
-  width: 20px;
-  height: 18px;
-
-  background-image: url("../img/svg/icon-user.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
+.main-header__user-icon--user {
   position: absolute;
-  top: 14px;
+  top: 15;
   left: 15px;
 }
 
-.main-header__user--login::after {
-  content: "";
-  width: 20px;
-  height: 17px;
-
-  background-image: url("../img/svg/icon-logout.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
+.main-header__user-icon--logout {
   position: absolute;
   top: 15px;
   right: 17px;
 }
-
-.main-header__user--login:hover::before {
-  background-image: url("../img/svg/icon-user-dark.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.main-header__user--login:hover::after {
-  background-image: url("../img/svg/icon-logout-dark.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.main-header__user--login:active::before {
-  background-image: url("../img/svg/icon-user.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.main-header__user--login:active::after {
-  background-image: url("../img/svg/icon-logout.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
 
 .main-user__menu {
   width: 210px;
@@ -607,6 +561,22 @@ input[type='radio'].visually-hidden {
 .main-header__user--account:active,
 .main-header__user--login:active {
   color: var(--basic-greylight);
+}
+
+.main-header__user--login:hover path {
+  fill: var(--basic-grey);
+}
+
+.main-header__user--login:active path {
+  fill: var(--basic-greylight);
+}
+
+.main-header__user-icon--logout:hover path{
+  fill: var(--basic-grey);
+}
+
+.main-header__user-icon--logout:active path{
+  fill: var(--basic-greylight);
 }
 
 /* Main-header__navigation
