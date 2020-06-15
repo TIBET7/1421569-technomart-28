@@ -1476,7 +1476,7 @@ input[type='radio'].visually-hidden {
   
   color: var(--special-grey);
   background-color: var(--basic-white);
-  box-shadow: 0px 1px 0px var(--basic-greylight), inset 0px 1px 0px var(--special-grey-light);
+  box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
 
   display: block;
 }
