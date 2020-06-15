@@ -837,43 +837,31 @@ input[type='radio'].visually-hidden {
   z-index: -10;
 }
 
-.slider::before {
-  content: "";
-  width: 22px;
-  height: 40px;
+.slider__arrow--right{
+  border: none;
 
-  background-image: url("../img/svg/icon-left.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  background-color: transparent;
 
   position: absolute;
-  top: 122px;
-  left: 24px;
-  z-index: 10;
+  top: 121px;
+  right: 15px;
 }
 
-.slider::after {
-  content: "";
-  width: 22px;
-  height: 40px;
+.slider__arrow--left{
+  border: none;
 
-  background-image: url("../img/svg/icon-right.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  
+  background-color: transparent;
+
   position: absolute;
-  top: 122px;
-  right: 20px;
-  z-index: 10;
+  top: 121px;
+  left: 17px;
 }
-
 
 .slider__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 
 .slide__title {
   margin: 0;
