@@ -1,4 +1,41 @@
 if (document.querySelector('.main-index')) {
+  let slides = document.querySelectorAll('.slide');
+  let buttonRight = document.querySelector('.slider__arrow--right');
+  let buttonLeft = document.querySelector('.slider__arrow--left');
+  let sliderControls = document.querySelectorAll('.slider__controls-item');
+  
+  let count = 0;
+
+  buttonLeft.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    if (count > 0) {
+      count = count - 1;
+      for (let slide of slides) {
+        slide.classList.remove('slide--current');
+      }
+      for (let sliderControl of sliderControls) {
+        sliderControl.classList.remove('slider__controls-item--current');
+      }
+      slides[count].classList.add('slide--current');
+      sliderControls[count].classList.add('slider__controls-item--current');
+    }
+  });
+
+  buttonRight.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    if (count < slides.length - 1) {
+      count = count + 1;
+      for (let slide of slides) {
+        slide.classList.remove('slide--current');
+      }
+      for (let sliderControl of sliderControls) {
+        sliderControl.classList.remove('slider__controls-item--current');
+      }
+      slides[count].classList.add('slide--current');
+      sliderControls[count].classList.add('slider__controls-item--current');
+    }
+  });
+
   let services = document.querySelector('.services');
   let servicesLink = services.querySelectorAll('.services__item-description');
   let serviceDescription = services.querySelectorAll('.service-description__item ');

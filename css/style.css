@@ -17,7 +17,7 @@
   --special-greenlight: #8ED78F;
   --special-yellowlight: #FFD180;
   --special-grey: #32425C;
-  --special-grey-light: #405069;
+  --special-greylight: #405069;
   --special-greydark: #1D2739;
   --special-light: #F3F7F9;
   --catalog-lightgray: #F2F6F8;
@@ -839,6 +839,7 @@ input[type='radio'].visually-hidden {
 
 .slider__arrow--right{
   border: none;
+  cursor: pointer;
 
   background-color: transparent;
 
@@ -849,6 +850,7 @@ input[type='radio'].visually-hidden {
 
 .slider__arrow--left{
   border: none;
+  cursor: pointer;
 
   background-color: transparent;
 
@@ -913,7 +915,7 @@ input[type='radio'].visually-hidden {
   left: 295px;
 }
 
-.slider__controls button{
+.slider__controls-item{
   padding: 0;
   width: 10px;
   height: 10px;
@@ -931,7 +933,7 @@ input[type='radio'].visually-hidden {
   display: block;
 }
 
-.slider__controls .current {
+.slider__controls-item--current {
   background-color: var(--basic-red);
 }
 
@@ -1408,7 +1410,7 @@ input[type='radio'].visually-hidden {
   
   color: var(--basic-white);
   background-color: var(--special-grey);
-  box-shadow: 0px 1px 0px var(--basic-greylight), inset 0px 1px 0px var(--special-grey-light);
+  box-shadow: 0px 1px 0px var(--basic-greydark), inset 0px 1px 0px var(--special-greylight);
 
   display: block;
 }
@@ -1434,7 +1436,8 @@ input[type='radio'].visually-hidden {
   
   color: var(--special-grey);
   background-color: var(--basic-white);
-  box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
+  box-shadow: 0px 1px 0px var(--basic-white),inset 0px 1px 0px var(--basic-white);
+  outline: none;
 
   display: block;
 }
