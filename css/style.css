@@ -38,6 +38,7 @@
   --active-green: #518534;
   --box-shadow-special: #367315; 
   --social-basic: #212A3A;
+  --hover-red: #CA2C37;
   --active: rgba(169, 169, 169, 0.3); 
   --active-light: rgba(255, 255, 255, 0.5);  
   --calm: rgba(255, 255, 255, 0.3);
@@ -46,7 +47,6 @@
   --box-shadow-product: rgba(0, 0, 0, 0.15);
   --modal-shadow: rgba(0, 0, 0, 0.75);
 }
-
 
 /* Global
 ===================*/
@@ -71,8 +71,8 @@ a {
 }
 
 .visually-hidden:not(:focus):not(:active), 
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -108,6 +108,10 @@ input[type='radio'].visually-hidden {
   background-color: var(--basic-red);
 }
 
+.button:hover {
+  background-color: var(--hover-red);
+}
+
 .button:active {
   background-color: var(--special-red);
 }
@@ -126,7 +130,6 @@ input[type='radio'].visually-hidden {
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
-
 
 /* Main-header
 ===================*/
@@ -311,15 +314,14 @@ input[type='radio'].visually-hidden {
 .bookmarks:active,
 .cart:active{
   background-color: var(--active-dark);
+  opacity: 0.3;
 }
 .bookmarks:hover::before, 
 .cart:hover::before {
   opacity: 1;
 }
 
-.bookmarks:active::before,
 .bookmarks:focus::before, 
-.cart:active::before,
 .cart:focus::before {
   opacity: 0.3;
 }
@@ -512,7 +514,7 @@ input[type='radio'].visually-hidden {
 
 .main-header__user-icon--user {
   position: absolute;
-  top: 15;
+  top: 15px;
   left: 15px;
 }
 
@@ -626,7 +628,6 @@ input[type='radio'].visually-hidden {
   margin-right: 8px;
 }
  
-
 .main-header__navigation-inner li:nth-child(4) {
   margin-right: 8px;
 }
@@ -893,10 +894,19 @@ input[type='radio'].visually-hidden {
   line-height: 18px;
   margin-left: 24px;
   text-transform: uppercase;
+  text-decoration: none;
+  padding: 11px 45px 8px 45px;
+
   color: var(--basic-white);
   background-color: var(--basic-red);
-  padding: 11px 45px 8px 45px;
-  text-decoration: none;
+}
+
+.slide__link:hover {
+  background-color: var(--hover-red);
+}
+
+.slide__link:active {
+  background-color: var(--special-red);
 }
 
 .slider__link:active {
@@ -919,6 +929,7 @@ input[type='radio'].visually-hidden {
   padding: 0;
   width: 10px;
   height: 10px;
+
   background-color: var(--basic-white);
   border: 2px solid var(--basic-white);
   border-radius: 50%;
@@ -962,7 +973,6 @@ input[type='radio'].visually-hidden {
   justify-content: space-between;
 }
   
-
 .best-sellers__title {
   margin: 0;
   margin-top: 29px;
@@ -1179,6 +1189,7 @@ input[type='radio'].visually-hidden {
   background-image: url("../img/svg/icon-cart.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
 
   position: absolute;
   top: 10px;
@@ -1268,7 +1279,7 @@ input[type='radio'].visually-hidden {
 .popular-brands__item  {
   width: 220px;
   height: 145px;
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--border-greylight);
 
   display: flex;
   flex-wrap: wrap;
@@ -1307,13 +1318,13 @@ input[type='radio'].visually-hidden {
 }
 
 .popular-brands__item:hover {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--box-shadow-product);
 }
 
 .popular-brands__item:active {
   background-color: var(--basic-white);
   border: 1px solid var(--border-greylight);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--box-shadow-product);
   opacity: 0.5;
 }
 
@@ -1394,7 +1405,6 @@ input[type='radio'].visually-hidden {
   position: absolute;
   left: 230px;
 }
-
 
 /* Services-item-description
 ===================*/
@@ -1535,7 +1545,6 @@ input[type='radio'].visually-hidden {
 
   color: var(--basic-black);
 }
-
 
 .button--credit {
   margin-top: 27px;
@@ -1718,6 +1727,7 @@ input[type='radio'].visually-hidden {
   list-style: none;
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -1735,7 +1745,6 @@ input[type='radio'].visually-hidden {
   padding-top: 30px;
 }
 
-
 .main-footer__navigation li:first-child {
   margin-left: 173px;
   margin-right: 58px;
@@ -1750,7 +1759,7 @@ input[type='radio'].visually-hidden {
 }
 
 .main-footer__navigation li:nth-child(4) {
-  margin-right: 59px;
+  margin-right: 58px;
 }
 
 .main-footer__navigation a:hover,
@@ -1800,6 +1809,7 @@ input[type='radio'].visually-hidden {
   width: 620px;
  
   display: flex;
+  flex-wrap: wrap;
   
 }
 
@@ -1821,7 +1831,7 @@ input[type='radio'].visually-hidden {
 }
 
 .main-footer__catalog-navigation li:nth-child(3) {
-  margin-right: 59px;
+  margin-right: 58px;
 }
 
 /* Footer-bottom
@@ -2506,11 +2516,6 @@ input[type='radio'].visually-hidden {
   border: 1px solid var(--basic-red);
 }
 
-.pagination__item:focus {
-  color: var(--basic-white);
-  background-color: var(--basic-red);     
-}
-
 /* Perforators description
 ===================*/
 
@@ -2626,7 +2631,6 @@ input[type='radio'].visually-hidden {
 .form-feedback input,
 .form-feedback textarea{
   margin-top: 10px;
-  
   padding-left: 10px;
   width: 220px;
   border: 2px solid var(--basic-greylight);
@@ -2700,7 +2704,6 @@ input[type='radio'].visually-hidden {
   z-index: 10;
 }
 
-
 /* Modal-map
 ===================*/
 
@@ -2709,6 +2712,10 @@ input[type='radio'].visually-hidden {
  height: 449px;
  margin-top: -225px;
  margin-left: -471px;
+ background-color: var(--modal-background);
+ background-image: url("../img/jpg/map.jpg");
+ background-repeat: no-repeat;
+ background-position: 0 0;
 
  top: 50%;
  left: 50%;
@@ -2782,7 +2789,6 @@ input[type='radio'].visually-hidden {
   top: 38px;
 }
 
-
 .button--continue {
   padding: 11px 29px 9px 34px;
 
@@ -2794,10 +2800,6 @@ input[type='radio'].visually-hidden {
   top: 38px;
   z-index: 20;
 }
-
-
-
-
 
 .modal-show {
   display: block;
@@ -2811,14 +2813,6 @@ input[type='radio'].visually-hidden {
   -webkit-animation: shake 0.6s;
           animation: shake 0.6s;
 }
-
-
-
-
-
-
-
-
 
 /* Modal-animation
 ===================*/

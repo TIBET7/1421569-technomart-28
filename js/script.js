@@ -3,7 +3,6 @@ if (document.querySelector('.main-index')) {
   let buttonRight = document.querySelector('.slider__arrow--right');
   let buttonLeft = document.querySelector('.slider__arrow--left');
   let sliderControls = document.querySelectorAll('.slider__controls-item');
-  
   let count = 0;
 
   buttonLeft.addEventListener('click', (evt) => {
@@ -78,8 +77,6 @@ if (document.querySelector('.main-index')) {
     serviceDescription[2].classList.add('service-description__item--current');
   });
 
-
-
   let button = document.querySelector('.button--feedback');
   let popup = document.querySelector('.modal-feedback');
   let close = document.querySelector('.modal-close');
@@ -88,7 +85,7 @@ if (document.querySelector('.main-index')) {
   let userEmail = popup.querySelector('[name=user-email]');
   let userMessage = popup.querySelector('[name=user-message');
   let isStorageSupport = true;
-  let storage = "";
+  let storage = '';
 
   try{
     storage = localStorage.getItem('username');
