@@ -94,15 +94,17 @@
               <div class="range-filter">
                 <div class="range-controls">
                   <div class="scale">
-                    <div class="bar" style="width: 70%; margin-left: 10% ;"></div>
+                    <div class="bar"></div>
                   </div>
-                  <div class="toggle togle-min" style="left: 8%" tabindex="0"></div>
-                  <div class="toggle togle-max" style="left: 73%" tabindex="0"></div>
+                  <div class="toggle togle-min" tabindex="0"></div>
+                  <div class="toggle togle-max" tabindex="0"></div>
                 </div>
                 <div class="price-controls">
-                    <input class="price-controls__min-price" type="number" name="min-price" value="0" aria-label="Нижняя граница цены">
+                    <label class="visually-hidden" for="min-price">Нижняя граница цены</label>
+                    <input class="price-controls__min-price" type="number" name="min-price" id="min-price" value="0">
                     <div class="range-decoration"></div>
-                    <input type="number" name="max-price" value="30000" aria-label="Верхняя граница цены">
+                    <label class="visually-hidden" for="max-price">Верхняя граница цены</label>
+                    <input type="number" name="max-price" id="max-price" value="30000">
                 </div>
               </div>
             </fieldset>

@@ -586,7 +586,7 @@ input[type="radio"].visually-hidden {
 
 .main-header__navigation{
   background-color: var(--special-grey);
-  box-shadow: inset 0px -5px 0px var(--hover-grey);
+  box-shadow: inset 0px -5px 0px var(--basic-greydark);
 }
 
 .main-header__navigation-inner {
@@ -2100,7 +2100,8 @@ input[type="radio"].visually-hidden {
 
 .range-controls .bar {
   height: 2px;
-  width: 85%;
+  width: 70%;
+  margin-left: 10%;
 
   background-color: var(--filter-bar);
 }
@@ -2122,11 +2123,11 @@ input[type="radio"].visually-hidden {
 }
 
 .range-controls .togle-min {
- left: 18px;
+ left: 8%;
 }
 
 .range-controls .togle-max {
-  left: 160px;
+  left: 73%;
 }
 
 .price-controls {
